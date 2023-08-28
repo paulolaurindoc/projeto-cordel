@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&family=Passion+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+:root {
+    --padrao: Verdana, Tahoma, sans-serif;
+    --titulo: 'Passion One', sans-serif;
+    --poema:  'Sriracha', cursive;
+}
+
+/* config universal para resetar as config padrões do navegador*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html, body {
+    min-height: 100vh; /*100vh = 100% da view height "a tela de exibição"*/
+    background-color: darkgray;
+    font-family: var(--padrao);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: var(--titulo);
+}
+
+header > h1 {
+    padding-top: 50px;
+    font-variant: small-caps; /*small-caps = para deixar as letras iniciais maiúsculas*/
+    font-size: 10vw; /* 10vw = 10% do view width "largura da tela" usamos para o tamanho do texto se adptar ao tamanho da tela*/
+}
+
+header > p {
+    padding-bottom: 50px;
+    font-family: var(--padrao);
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em;
+    padding-left: 30px;
+    font-family: var(--poema);
+    font-size: 3.5vw;
+}
+
+section > p {
+    padding-bottom: 2em;
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section.imagem {
+    background-color: rgb(55, 54, 54);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.475); /* usamos para dar sombreamento por dentro da caixa*/
+    background-attachment: fixed; /* usado para o efeito paralaxe*/
+    background-size: cover;
+}
+
+section.imagem > p {
+    background-color: rgba(0, 0, 0, 0.375);
+    display: inline-block; /* transformamos assim nossa section em uma caixa que se adpta ao tamanho do conteúdo*/
+    padding: 5px;
+    text-shadow: 1px 1px 0px black;
+}
+
+section.imagem#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: center right;
+}  
+
+section.imagem#img02 {
+    background-image: url(../imagens/background002.jpg);
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
